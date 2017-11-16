@@ -11,4 +11,4 @@ search.c \
 stage.c \
 tabs.c
 les_CPPFLAGS= -I$(top_srcdir)/include
-les_LDADD = -lncurses -lpcre2-8
+les_LDADD = @CURSES_LIBS@ -lpcre2-8
