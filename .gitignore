@@ -1,5 +1,6 @@
 *~
 *.o
+les-*.tar.gz
 les
 defines.h
 defines.mk

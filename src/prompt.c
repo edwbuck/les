@@ -1,4 +1,13 @@
-#include "les.h"
+#include "prompt.h"
+
+#include "stage.h"
+#include "page.h"
+#include "tabs.h"
+#include "linewrap.h"
+#include "charinfo.h"
+#include "movement.h"
+#include "readfile.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -99,7 +108,10 @@ void prompt_left_word () {
     if (pr->cursor == pr->prompt_len) {
         return;
     }
-    int i, j, whitespace1, whitespace2;
+    int i;
+    int j;
+    int whitespace1;
+    int whitespace2;
     for (i = pr->cursor - 1; (pr->buf[i] & 0xc0) == 0x80; i--)
         ;
     for (; i > pr->prompt_len;) {

@@ -1,4 +1,11 @@
-#include "les.h"
+#include "movement.h"
+#include "stage.h"
+#include "page.h"
+#include "readfile.h"
+#include "linewrap.h"
+#include "charinfo.h"
+#include "tabs.h"
+
 #include <term.h>
 #include <stdlib.h>
 #include <unistd.h>

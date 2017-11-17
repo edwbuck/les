@@ -1,17 +1,46 @@
-#include "les.h"
+#include "movement.h"
+#include "search.h"
+#include "stage.h"
+#include "page.h"
+#include "recentfiles.h"
+#include "readfile.h"
+#include "tabs.h"
+#include "prompt.h"
+#include "charinfo.h"
+
+#ifdef HAVE_CONFIG_H
+#  include <config.h>
+#endif /* HAVE_CONFIG_H */
+
+#ifdef HAVE_TERM_H
+#  include <term.h>
+#endif /* HAVE_TERM_H */
+
+#ifdef HAVE_TERMIOS_H
+#  include <termios.h>
+#endif /* HAVE_TERMIOS_H */
+
+#ifdef HAVE_FCNTL_H
+#  include <fcntl.h>
+#endif /* HAVE_FCNTL_H */
+
+#ifdef HAVE_SIGNAL_H
+#  include <signal.h>
+#endif /* HAVE_SIGNAL_H */
+
+#ifdef HAVE_STDLIB_H
+#  include <stdlib.h>
+#endif /* HAVE_STDLIB_H */
+
 #include <stdio.h>
-#include <stdlib.h>
-#include <term.h>
 #include <unistd.h>
-#include <fcntl.h>
-#include <string.h>
 #include <errno.h>
-#include <signal.h>
 #include <sys/stat.h>
 #include <sys/select.h>
 #include <getopt.h>
 #include <sys/ioctl.h>
 #include <sys/wait.h>
+#include <string.h>
 
 int line_wrap = 1;
 int tty;

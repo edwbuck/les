@@ -1,5 +1,12 @@
-#include "les.h"
-#include <string.h>
+#include "charinfo.h"
+
+#ifdef HAVE_CONFIG_H
+#  include <config.h>
+#endif /* HAVE_CONFIG_H */
+
+#ifdef HAVE_STRING_H
+#  include <string.h>
+#endif /* HAVE_STRING_H */
 
 int get_char_width (unsigned int codepoint) {
     static width_range_t width_ranges[] = {

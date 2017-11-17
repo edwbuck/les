@@ -1,4 +1,5 @@
 bin_PROGRAMS=les
+
 les_SOURCES=main.c \
 charinfo.c \
 linewrap.c \
@@ -10,5 +11,6 @@ recentfiles.c \
 search.c \
 stage.c \
 tabs.c
-les_CPPFLAGS= -I$(top_srcdir)/include
+
+les_CPPFLAGS= -I$(top_srcdir)/include -Werror
 les_LDADD = @CURSES_LIBS@ -lpcre2-8

@@ -1,4 +1,16 @@
-#include "les.h"
+#include "movement.h"
+#include "page.h"
+#include "recentfiles.h"
+#include "tabs.h"
+
+#ifdef HAVE_CONFIG_H
+#  include <config.h>
+#endif /* HAVE_CONFIG_H */
+
+#ifdef HAVE_STDIO_H
+#  include <stdio.h>
+#endif /* HAVE_STDIO_H */
+
 #include <time.h>
 #include <fcntl.h>
 #include <stdlib.h>

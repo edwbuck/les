@@ -1,1 +1,1 @@
-SUBDIRS=src
+SUBDIRS=man include src 

@@ -1,7 +1,16 @@
-#include "les.h"
+#include "page.h"
+
+#include "stage.h"
+#include "linewrap.h"
+#include "charinfo.h"
+#include "movement.h"
+#include "tabs.h"
+#include "search.h"
+
 #include <term.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 typedef struct {
     char *buf;

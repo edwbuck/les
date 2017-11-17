@@ -1,4 +1,20 @@
-#include "les.h"
+#include "readfile.h"
+
+#include "movement.h"
+#include "recentfiles.h"
+#include "page.h"
+#include "charinfo.h"
+#include "tabs.h"
+
+#ifdef HAVE_CONFIG_H
+#  include <config.h>
+#endif /* HAVE_CONFIG_H */
+
+#ifdef HAVE_STDIO_H
+#  include <stdio.h>
+#endif /* HAVE_STDIO_H */
+
+
 #include <iconv.h>
 #include <errno.h>
 #include <stdlib.h>
